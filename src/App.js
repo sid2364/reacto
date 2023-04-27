@@ -1,28 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import Welcome from "./components/Welcome"
-import ChatBox from "./components/ChatBox"
-import NavigationBar from "./components/NavigationBar"
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import "./App.css";
+import NavBar from "./components/NavBar";
+import ChatBox from "./components/ChatBox";
+import Welcome from "./components/Welcome";
 
 function App() {
-    const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
 
-
-    return (
-      <>
-        <img src={logo} className="App-logo" alt="logo" width={120} height={120} />
-          <NavigationBar />
-          {!user ? (
-              <Welcome />
-          ) : (
-              <>
-                  <ChatBox />
-              </>
-          )}
-      </>
+  return (
+    <div className="App">
+      <NavBar />
+      {!user ? (
+        <Welcome />
+      ) : (
+        <>
+          <ChatBox />
+        </>
+      )}
+    </div>
   );
 }
 
