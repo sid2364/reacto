@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React  from "react";
 import GoogleSignin from "../google-sign-in.png";
 
 import { auth } from "../firebase";

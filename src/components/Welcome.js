@@ -18,6 +18,7 @@ const Welcome = () => {
                     onClick={googleSignIn}
                     src={googleSignInButton}
                     type="button"
+                    alt="Sign-in with Google"
                 />
             </button>
         </main>
