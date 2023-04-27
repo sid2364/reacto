@@ -3,10 +3,13 @@ import './App.css';
 import Welcome from "./components/Welcome"
 import ChatBox from "./components/ChatBox"
 import NavigationBar from "./components/NavigationBar"
-import { useState} from "react";
+import { auth } from "./firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 
 function App() {
-    const [user, setUser] = useState(false);
+    const [user] = useAuthState(auth);
+
 
     return (
       <>
