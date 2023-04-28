@@ -23,6 +23,7 @@ input {
   min-height: 100vh;
   background-color: #0f1d33;
   color: #7fbad9;
+  background-image: url("img/pexels-photo-531880.jpeg");
 }
 
 /* navbar */
@@ -31,7 +32,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #4c768d;
+  background-color: rgba(76, 118, 141, 0.37);
   color: #242443;
   height: 60px;
 }
@@ -57,7 +58,7 @@ input {
   padding: 150px;
   text-align: center;
   margin-top: 40px;
-  color: #7cc5d9;
+  color: #c8efff;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
@@ -72,7 +73,7 @@ input {
 .chat-bubble {
   border-radius: 20px 20px 20px 0;
   padding: 15px;
-  background-color: rgba(124, 197, 217, 0.9);
+  background-color: rgba(124, 197, 217, 0.76);
   color: #0b111f;
   width: max-content;
   max-width: calc(100% - 50px);
@@ -84,8 +85,8 @@ input {
 .chat-bubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
-  background-color: #9f7b7b;
-  box-shadow: -2px 2px 1px 1px #ec0b0b;
+  background-color: rgba(231, 154, 154, 0.84);
+  box-shadow: -2px 2px 1px 1px rgba(236, 11, 11, 0.7);
 }
 .chat-bubble__left {
   width: 35px;
@@ -113,7 +114,7 @@ input {
   bottom: 0px;
   width: 100%;
   padding: 20px 30px;
-  background-color: #4c768d;
+  background-color: rgba(0, 0, 0);
   display: flex;
 }
 .send-messages > input {
@@ -125,9 +126,9 @@ input {
   background-color: white;
   color: #1c2c4c;
   font-size: 1rem;
-  text-align: left;
+  text-align: right;
 }
-.send-messages > input:placeholder {
+.send-messages > input::placeholder {
   color: #ddd;
 }
 .send-messages > :is(input, button):focus {
@@ -150,11 +151,11 @@ input {
   position: fixed;
   bottom: 0px;
   padding: 20px 30px;
-  background-color: #4c768d;
+  background-color: rgba(0, 0, 0);
   display: flex;
 }
 .clear-messages > button {
-  width: 120px;
+  width: 150px;
   height: 40px;
   padding: 5px 10px;
   border-radius: 5px 5px 5px 5px;
