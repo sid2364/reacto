@@ -54,13 +54,14 @@ input {
 
 /* welcome page */
 .welcome {
-  padding: 30px;
+  padding: 150px;
   text-align: center;
   margin-top: 40px;
   color: #7cc5d9;
 }
 .welcome :is(h2, p, img) {
   margin-bottom: 20px;
+
 }
 
 /* chat component */
@@ -98,16 +99,16 @@ input {
   font-size: 0.9rem;
   color: #1c2c4c;
 }
-.user-message {
+.user-messages {
   word-break: break-all;
 }
-.message-time {
+.messages-time {
   display: block;
   text-align: right;
 }
 
-/* send message */
-.send-message {
+/* send messages */
+.send-messages {
   position: fixed;
   bottom: 0px;
   width: 100%;
@@ -115,7 +116,7 @@ input {
   background-color: #4c768d;
   display: flex;
 }
-.send-message > input {
+.send-messages > input {
   height: 40px;
   padding: 10px 10px;
   border-radius: 5px 0 0 5px;
@@ -124,15 +125,16 @@ input {
   background-color: white;
   color: #1c2c4c;
   font-size: 1rem;
+  text-align: left;
 }
-.send-message > input:placeholder {
+.send-messages > input:placeholder {
   color: #ddd;
 }
-.send-message > :is(input, button):focus {
+.send-messages > :is(input, button):focus {
   outline: none;
   border-bottom: 1px solid #7cc5d9;
 }
-.send-message > button {
+.send-messages > button {
   width: 70px;
   height: 40px;
   padding: 5px 10px;
@@ -140,5 +142,24 @@ input {
   color: #242443;
   border: 1px solid #7cc5d9;
   background-color: #7cc5d9;
+  font-weight: 600;
+}
+
+/* clear messages */
+.clear-messages {
+  position: fixed;
+  bottom: 0px;
+  padding: 20px 30px;
+  background-color: #4c768d;
+  display: flex;
+}
+.clear-messages > button {
+  width: 120px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 5px 5px 5px 5px;
+  color: #242443;
+  border: 1px solid #7cc5d9;
+  background-color: rgb(215, 101, 101);
   font-weight: 600;
 }

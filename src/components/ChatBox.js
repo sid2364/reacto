@@ -9,6 +9,7 @@ import {
 import { db } from "../firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
+import ClearMessages from "./ClearMessages"
 
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
@@ -38,9 +39,9 @@ const ChatBox = () => {
           <Message key={message.id} message={message} />
         ))}
       </div>
-      {/* when a new message enters the chat, the screen scrolls dowwn to the scroll div */}
       <span ref={scroll}></span>
       <SendMessage scroll={scroll} />
+      <ClearMessages/>
     </main>
   );
 };
