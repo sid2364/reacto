@@ -6,13 +6,25 @@ import {
   onSnapshot,
   limit,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { auth, db } from "../firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 import ClearMessages from "./ClearMessages"
 
+const Typing = ({ user }) => (
+    <div className="typing">
+        <p>{user} is typing</p>
+      <div className="typing__dot"></div>
+      <div className="typing__dot"></div>
+      <div className="typing__dot"></div>
+    </div>
+)
+
 const ChatBox = () => {
+  const { displayName } = auth.currentUser;
   const [messages, setMessages] = useState([]);
+  const [typing, setTyping] = useState(false)
+
   const scroll = useRef();
 
   useEffect(() => {
@@ -32,6 +44,13 @@ const ChatBox = () => {
     return () => unsubscribe;
   }, []);
 
+  function handleTypingMessage() {
+    setTyping(true)
+    setTimeout(() => {
+        setTyping(false)
+    }, 2000);
+  }
+
   return (
     <main className="chat-box">
       <div className="messages-wrapper">
@@ -40,7 +59,9 @@ const ChatBox = () => {
         ))}
       </div>
       <span ref={scroll}></span>
-      <SendMessage scroll={scroll} />
+        <div> { typing ? <Typing user={displayName}/> : null } </div>
+
+      <SendMessage scroll={scroll} handleTypingMessage={handleTypingMessage} />
       <ClearMessages/>
     </main>
   );

@@ -23,7 +23,11 @@ input {
   min-height: 100vh;
   background-color: #0f1d33;
   color: #7fbad9;
+  /*background-image: url("img/szandme.jpeg");*/
   background-image: url("img/pexels-photo-531880.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed
 }
 
 /* navbar */
@@ -73,11 +77,11 @@ input {
 .chat-bubble {
   border-radius: 20px 20px 20px 0;
   padding: 15px;
-  background-color: rgba(124, 197, 217, 0.76);
+  background-color: rgb(205, 204, 221);
   color: #0b111f;
   width: max-content;
   max-width: calc(100% - 50px);
-  box-shadow: -2px 2px 1px 1px #4c768d;
+  box-shadow: -2px 2px 1px 1px #18252d;
   display: flex;
   align-items: flex-start;
   margin-bottom: 20px;
@@ -85,8 +89,11 @@ input {
 .chat-bubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
-  background-color: rgba(231, 154, 154, 0.84);
-  box-shadow: -2px 2px 1px 1px rgba(236, 11, 11, 0.7);
+  /*background-color: rgb(218, 9, 141);
+  box-shadow: -2px 2px 1px 1px rgb(255, 0, 153);*/
+  color: #0b111f;
+  background-color: rgb(255, 0, 130);
+  box-shadow: -2px 2px 1px 1px rgb(105, 6, 77);
 }
 .chat-bubble__left {
   width: 35px;
@@ -163,4 +170,51 @@ input {
   border: 1px solid #7cc5d9;
   background-color: rgb(215, 101, 101);
   font-weight: 600;
+}
+
+.typing {
+  width: 5em;
+  height: 2em;
+  bottom: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  padding: 10px;
+  margin-left: 5px;
+  background: #e6e6e6;
+  border-radius: 15px;
+}
+
+.typing__dot {
+  float: left;
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background: #8d8c91;
+  border-radius: 50%;
+  opacity: 0;
+  animation: loadingFade 1s infinite;
+}
+
+.typing__dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typing__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loadingFade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
