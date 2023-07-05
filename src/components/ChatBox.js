@@ -55,7 +55,7 @@ const ChatBox = () => {
                 {messages?.map((message) => (
                     <Message key={message.id} message={message} />
                 ))}
-                { typing ? <TypingDots user={displayName}/> : null }
+                { typing ? <TypingDots scroll={scroll} user={displayName}/> : null }
             </div>
             <span ref={scroll}></span>
             <SendMessage scroll={scroll} handleTypingMessage={handleTypingMessage} />
