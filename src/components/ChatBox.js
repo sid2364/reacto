@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import {
     query,
@@ -66,7 +65,6 @@ const ChatBox = () => {
 };
 
 export default ChatBox;
-=======
 import React, { useEffect, useRef, useState } from "react";
 import {
   query,
@@ -137,4 +135,3 @@ const ChatBox = () => {
 };
 
 export default ChatBox;
->>>>>>> 45078e6 (Adding trunk check)
