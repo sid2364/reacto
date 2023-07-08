@@ -12,10 +12,6 @@ import SendMessage from "./SendMessage";
 import ClearMessages from "./ClearMessages"
 import TypingDots from "./TypingDots";
 
-const Typing = ({ user }) => (
-    <TypingDots message={"..."} />
-)
-
 const ChatBox = () => {
     const { displayName } = auth.currentUser;
     const [messages, setMessages] = useState([]);
