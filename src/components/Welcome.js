@@ -1,5 +1,5 @@
 import React from "react";
-import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
+//import GoogleSignin from "../img/btn_google_signin_dark_pressed_web.png";
 import { auth } from "../firebase";
 import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
@@ -17,8 +17,8 @@ const Welcome = () => {
       <button className="sign-in">
         <img
           onClick={googleSignIn}
-          src={GoogleSignin}
-          alt="sign in with google"
+          //src={GoogleSignin}
+          alt="Sign in with google"
           type="button"
         />
       </button>
