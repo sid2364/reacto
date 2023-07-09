@@ -14,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "reacto-ee758.appspot.com",
   messagingSenderId: "458770371775",
   appId: "1:458770371775:web:a4c958eaf8df0ee1e0e20a",
-  measurementId: "G-JCK8Z0NK97",
+  measurementId: "G-JCK8Z0NK97"
 };
 
 // Initialize Firebase
