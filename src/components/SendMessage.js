@@ -25,10 +25,10 @@ const SendMessage = ({ scroll, handleTypingMessage }) => {
 
   return (
     <form
-        onSubmit={(event) => sendMessage(event)}
-        onChange={handleTypingMessage}
-
-        className="send-messages">
+      onSubmit={(event) => sendMessage(event)}
+      onChange={handleTypingMessage}
+      className="send-messages"
+    >
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>
