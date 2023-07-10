@@ -16,7 +16,6 @@ lint:
     - prettier@3.0.0
     - trivy@0.43.0
     - trufflehog@3.43.0
-  disabled:
     - oxipng@8.0.0
 runtimes:
   enabled:
